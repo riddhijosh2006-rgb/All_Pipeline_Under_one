@@ -323,3 +323,42 @@ Possible future enhancements include:
 B.Tech – Computer Science Engineering (Data Science)
 
 This project is part of a Data Engineering learning portfolio.
+## 📊 Interactive Analytics Dashboard
+
+This project includes a Streamlit dashboard for exploring the customer pipeline output in a portfolio-friendly interface.
+
+### Dashboard features
+
+- Pipeline and data-source status
+- Total customers and total purchase value KPIs
+- Average purchase and average age metrics
+- High-value customer share
+- Purchase amount by city
+- High vs Low purchase category distribution
+- Age vs purchase amount analysis
+- Top-customer table
+- Searchable customer records
+- City, category, and age filters
+- Pipeline health and recent log viewer
+- Local CSV and PostgreSQL data-source options
+
+### Run the dashboard
+
+Install the project dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Start Streamlit:
+
+```bash
+streamlit run dashboard.py
+```
+
+The dashboard can run directly from `data/customers.csv`. To display data from PostgreSQL, create your local `.env` file using `.env.example`, run the ETL pipeline, and then select **PostgreSQL** in the dashboard sidebar.
+
+### Recommended GitHub demo
+
+For a strong portfolio presentation, add a screenshot of the dashboard to the repository README after running it locally. This makes the repository visually understandable before a recruiter opens the code.
+
