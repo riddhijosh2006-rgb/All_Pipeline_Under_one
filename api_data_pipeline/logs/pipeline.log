@@ -1,0 +1,292 @@
+2026-09-03 11:15:44,526 - INFO - ========== API DATA PIPELINE STARTED ==========
+2026-09-03 11:15:44,527 - INFO - STEP 1: EXTRACT
+2026-09-03 11:15:44,527 - INFO - Connecting to Weather API...
+2026-09-03 11:15:45,822 - INFO - API connection successful!
+2026-09-03 11:15:45,823 - INFO - Weather data extracted successfully!
+2026-09-03 11:15:45,826 - INFO - Extract step completed successfully!
+2026-09-03 11:15:45,826 - INFO - STEP 2: TRANSFORM
+2026-09-03 11:15:45,827 - INFO - Starting transformation...
+2026-09-03 11:15:45,891 - INFO - Transformation completed!
+2026-09-03 11:15:45,891 - INFO - Transformed 24 records
+2026-09-03 11:15:45,891 - INFO - Transform step completed successfully!
+2026-09-03 11:15:45,892 - INFO - Transformed Data:
+2026-09-03 11:15:45,892 - INFO - 
+             timestamp  ...       city
+0  2026-09-03 00:00:00  ...  Ahmedabad
+1  2026-09-03 01:00:00  ...  Ahmedabad
+2  2026-09-03 02:00:00  ...  Ahmedabad
+3  2026-09-03 03:00:00  ...  Ahmedabad
+4  2026-09-03 04:00:00  ...  Ahmedabad
+5  2026-09-03 05:00:00  ...  Ahmedabad
+6  2026-09-03 06:00:00  ...  Ahmedabad
+7  2026-09-03 07:00:00  ...  Ahmedabad
+8  2026-09-03 08:00:00  ...  Ahmedabad
+9  2026-09-03 09:00:00  ...  Ahmedabad
+10 2026-09-03 10:00:00  ...  Ahmedabad
+11 2026-09-03 11:00:00  ...  Ahmedabad
+12 2026-09-03 12:00:00  ...  Ahmedabad
+13 2026-09-03 13:00:00  ...  Ahmedabad
+14 2026-09-03 14:00:00  ...  Ahmedabad
+15 2026-09-03 15:00:00  ...  Ahmedabad
+16 2026-09-03 16:00:00  ...  Ahmedabad
+17 2026-09-03 17:00:00  ...  Ahmedabad
+18 2026-09-03 18:00:00  ...  Ahmedabad
+19 2026-09-03 19:00:00  ...  Ahmedabad
+20 2026-09-03 20:00:00  ...  Ahmedabad
+21 2026-09-03 21:00:00  ...  Ahmedabad
+22 2026-09-03 22:00:00  ...  Ahmedabad
+23 2026-09-03 23:00:00  ...  Ahmedabad
+
+[24 rows x 5 columns]
+2026-09-03 11:15:45,955 - INFO - Data Types:
+2026-09-03 11:15:45,956 - INFO - 
+timestamp         datetime64[us]
+temperature_c            float64
+humidity_pct               int64
+wind_speed_kmh           float64
+city                         str
+dtype: object
+2026-09-03 11:15:45,962 - INFO - STEP 3: LOAD
+2026-09-03 11:15:45,963 - INFO - Checking weather_data table...
+2026-09-03 11:15:45,963 - INFO - Connecting to PostgreSQL...
+2026-09-03 11:15:46,111 - INFO - PostgreSQL connection successful!
+2026-09-03 11:15:46,117 - INFO - Weather table created successfully!
+2026-09-03 11:15:46,117 - INFO - Loading data into PostgreSQL...
+2026-09-03 11:15:46,118 - INFO - Connecting to PostgreSQL...
+2026-09-03 11:15:46,220 - INFO - PostgreSQL connection successful!
+2026-09-03 11:15:46,253 - INFO - 0 new rows loaded successfully!
+2026-09-03 11:15:46,253 - INFO - 24 duplicate rows skipped!
+2026-09-03 11:15:46,254 - INFO - Load step completed successfully!
+2026-09-03 11:15:46,254 - INFO - ========== PIPELINE COMPLETED SUCCESSFULLY ==========
+2026-09-03 11:47:35,541 - INFO - ========================================
+2026-09-03 11:47:35,542 - INFO - API DATA PIPELINE STARTED
+2026-09-03 11:47:35,543 - INFO - ========================================
+2026-09-03 11:47:35,543 - INFO - STEP 1: EXTRACT
+2026-09-03 11:47:35,543 - INFO - Connecting to Weather API...
+2026-09-03 11:47:36,825 - INFO - API connection successful!
+2026-09-03 11:47:36,826 - INFO - Weather data extracted successfully!
+2026-09-03 11:47:36,833 - INFO - Extract step completed successfully!
+2026-09-03 11:47:36,836 - INFO - STEP 2: TRANSFORM
+2026-09-03 11:47:36,837 - INFO - Starting transformation...
+2026-09-03 11:47:36,926 - INFO - Transformation completed!
+2026-09-03 11:47:36,926 - INFO - Transformed 24 records
+2026-09-03 11:47:36,926 - INFO - Transform step completed successfully!
+2026-09-03 11:47:36,927 - INFO - Transformed Data:
+2026-09-03 11:47:36,927 - INFO - 
+             timestamp  ...       city
+0  2026-09-03 00:00:00  ...  Ahmedabad
+1  2026-09-03 01:00:00  ...  Ahmedabad
+2  2026-09-03 02:00:00  ...  Ahmedabad
+3  2026-09-03 03:00:00  ...  Ahmedabad
+4  2026-09-03 04:00:00  ...  Ahmedabad
+5  2026-09-03 05:00:00  ...  Ahmedabad
+6  2026-09-03 06:00:00  ...  Ahmedabad
+7  2026-09-03 07:00:00  ...  Ahmedabad
+8  2026-09-03 08:00:00  ...  Ahmedabad
+9  2026-09-03 09:00:00  ...  Ahmedabad
+10 2026-09-03 10:00:00  ...  Ahmedabad
+11 2026-09-03 11:00:00  ...  Ahmedabad
+12 2026-09-03 12:00:00  ...  Ahmedabad
+13 2026-09-03 13:00:00  ...  Ahmedabad
+14 2026-09-03 14:00:00  ...  Ahmedabad
+15 2026-09-03 15:00:00  ...  Ahmedabad
+16 2026-09-03 16:00:00  ...  Ahmedabad
+17 2026-09-03 17:00:00  ...  Ahmedabad
+18 2026-09-03 18:00:00  ...  Ahmedabad
+19 2026-09-03 19:00:00  ...  Ahmedabad
+20 2026-09-03 20:00:00  ...  Ahmedabad
+21 2026-09-03 21:00:00  ...  Ahmedabad
+22 2026-09-03 22:00:00  ...  Ahmedabad
+23 2026-09-03 23:00:00  ...  Ahmedabad
+
+[24 rows x 5 columns]
+2026-09-03 11:47:36,991 - INFO - Data Types:
+2026-09-03 11:47:36,992 - INFO - 
+timestamp         datetime64[us]
+temperature_c            float64
+humidity_pct               int64
+wind_speed_kmh           float64
+city                         str
+dtype: object
+2026-09-03 11:47:36,994 - INFO - STEP 3: LOAD
+2026-09-03 11:47:36,995 - INFO - Checking weather_data table...
+2026-09-03 11:47:36,995 - INFO - Connecting to PostgreSQL...
+2026-09-03 11:47:37,140 - INFO - PostgreSQL connection successful!
+2026-09-03 11:47:37,144 - INFO - Weather table created successfully!
+2026-09-03 11:47:37,145 - INFO - Loading data into PostgreSQL...
+2026-09-03 11:47:37,145 - INFO - Connecting to PostgreSQL...
+2026-09-03 11:47:37,235 - INFO - PostgreSQL connection successful!
+2026-09-03 11:47:37,266 - INFO - 0 new rows loaded successfully!
+2026-09-03 11:47:37,267 - INFO - 24 duplicate rows skipped!
+2026-09-03 11:47:37,267 - INFO - Load step completed successfully!
+2026-09-03 11:47:37,268 - INFO - ========================================
+2026-09-03 11:47:37,268 - INFO - PIPELINE COMPLETED SUCCESSFULLY
+2026-09-03 11:47:37,268 - INFO - ========================================
+2026-09-03 11:50:53,402 - INFO - ========================================
+2026-09-03 11:50:53,403 - INFO - API DATA PIPELINE STARTED
+2026-09-03 11:50:53,403 - INFO - ========================================
+2026-09-03 11:50:53,403 - INFO - STEP 1: EXTRACT
+2026-09-03 11:50:53,404 - INFO - Connecting to Weather API...
+2026-09-03 11:50:54,745 - INFO - API connection successful!
+2026-09-03 11:50:54,746 - INFO - Weather data extracted successfully!
+2026-09-03 11:50:54,752 - INFO - Extract step completed successfully!
+2026-09-03 11:50:54,753 - INFO - STEP 2: TRANSFORM
+2026-09-03 11:50:54,754 - INFO - Starting transformation...
+2026-09-03 11:50:54,800 - INFO - Transformation completed!
+2026-09-03 11:50:54,800 - INFO - Transformed 24 records
+2026-09-03 11:50:54,801 - INFO - Transform step completed successfully!
+2026-09-03 11:50:54,802 - INFO - Transformed Data:
+2026-09-03 11:50:54,803 - INFO - 
+             timestamp  ...       city
+0  2026-09-03 00:00:00  ...  Ahmedabad
+1  2026-09-03 01:00:00  ...  Ahmedabad
+2  2026-09-03 02:00:00  ...  Ahmedabad
+3  2026-09-03 03:00:00  ...  Ahmedabad
+4  2026-09-03 04:00:00  ...  Ahmedabad
+5  2026-09-03 05:00:00  ...  Ahmedabad
+6  2026-09-03 06:00:00  ...  Ahmedabad
+7  2026-09-03 07:00:00  ...  Ahmedabad
+8  2026-09-03 08:00:00  ...  Ahmedabad
+9  2026-09-03 09:00:00  ...  Ahmedabad
+10 2026-09-03 10:00:00  ...  Ahmedabad
+11 2026-09-03 11:00:00  ...  Ahmedabad
+12 2026-09-03 12:00:00  ...  Ahmedabad
+13 2026-09-03 13:00:00  ...  Ahmedabad
+14 2026-09-03 14:00:00  ...  Ahmedabad
+15 2026-09-03 15:00:00  ...  Ahmedabad
+16 2026-09-03 16:00:00  ...  Ahmedabad
+17 2026-09-03 17:00:00  ...  Ahmedabad
+18 2026-09-03 18:00:00  ...  Ahmedabad
+19 2026-09-03 19:00:00  ...  Ahmedabad
+20 2026-09-03 20:00:00  ...  Ahmedabad
+21 2026-09-03 21:00:00  ...  Ahmedabad
+22 2026-09-03 22:00:00  ...  Ahmedabad
+23 2026-09-03 23:00:00  ...  Ahmedabad
+
+[24 rows x 5 columns]
+2026-09-03 11:50:54,859 - INFO - Data Types:
+2026-09-03 11:50:54,859 - INFO - 
+timestamp         datetime64[us]
+temperature_c            float64
+humidity_pct               int64
+wind_speed_kmh           float64
+city                         str
+dtype: object
+2026-09-03 11:50:54,862 - INFO - STEP 3: DATA QUALITY VALIDATION
+2026-09-03 11:50:54,862 - INFO - Starting data quality validation...
+2026-09-03 11:50:54,863 - INFO - CHECK 1 PASSED: DataFrame is not empty.
+2026-09-03 11:50:54,863 - INFO - CHECK 2 PASSED: All required columns exist.
+2026-09-03 11:50:54,871 - INFO - CHECK 3 PASSED: No NULL values found.
+2026-09-03 11:50:54,892 - INFO - CHECK 4 PASSED: No duplicate records found.
+2026-09-03 11:50:54,900 - INFO - CHECK 5 PASSED: Humidity values are valid.
+2026-09-03 11:50:54,903 - INFO - CHECK 6 PASSED: Wind speed values are valid.
+2026-09-03 11:50:54,906 - INFO - CHECK 7 PASSED: Temperature values are valid.
+2026-09-03 11:50:54,906 - INFO - CHECK 8 PASSED: Timestamp values are valid.
+2026-09-03 11:50:54,907 - INFO - ========================================
+2026-09-03 11:50:54,908 - INFO - DATA QUALITY VALIDATION PASSED
+2026-09-03 11:50:54,908 - INFO - Validated 24 records successfully.
+2026-09-03 11:50:54,909 - INFO - ========================================
+2026-09-03 11:50:54,909 - INFO - Data quality validation completed successfully!
+2026-09-03 11:50:54,909 - INFO - STEP 4: LOAD
+2026-09-03 11:50:54,910 - INFO - Checking weather_data table...
+2026-09-03 11:50:54,910 - INFO - Connecting to PostgreSQL...
+2026-09-03 11:50:55,115 - INFO - PostgreSQL connection successful!
+2026-09-03 11:50:55,118 - INFO - Weather table created successfully!
+2026-09-03 11:50:55,119 - INFO - Loading data into PostgreSQL...
+2026-09-03 11:50:55,119 - INFO - Connecting to PostgreSQL...
+2026-09-03 11:50:55,204 - INFO - PostgreSQL connection successful!
+2026-09-03 11:50:55,221 - INFO - 0 new rows loaded successfully!
+2026-09-03 11:50:55,221 - INFO - 24 duplicate rows skipped!
+2026-09-03 11:50:55,223 - INFO - Load step completed successfully!
+2026-09-03 11:50:55,224 - INFO - ========================================
+2026-09-03 11:50:55,225 - INFO - PIPELINE COMPLETED SUCCESSFULLY
+2026-09-03 11:50:55,226 - INFO - ========================================
+2026-09-03 14:47:09,430 - INFO - ========================================
+2026-09-03 14:47:09,431 - INFO - API DATA PIPELINE STARTED
+2026-09-03 14:47:09,432 - INFO - ========================================
+2026-09-03 14:47:09,432 - INFO - STEP 1: EXTRACT
+2026-09-03 14:47:09,433 - INFO - Starting weather data extraction for all cities...
+2026-09-03 14:47:09,433 - INFO - Extracting weather data for Ahmedabad...
+2026-09-03 14:47:11,050 - INFO - Weather data extracted successfully for Ahmedabad.
+2026-09-03 14:47:11,051 - INFO - Extracting weather data for Mumbai...
+2026-09-03 14:47:12,434 - INFO - Weather data extracted successfully for Mumbai.
+2026-09-03 14:47:12,435 - INFO - Extracting weather data for Delhi...
+2026-09-03 14:47:13,767 - INFO - Weather data extracted successfully for Delhi.
+2026-09-03 14:47:13,768 - INFO - Extracting weather data for Bangalore...
+2026-09-03 14:47:15,052 - INFO - Weather data extracted successfully for Bangalore.
+2026-09-03 14:47:15,053 - INFO - Extracting weather data for Pune...
+2026-09-03 14:47:16,344 - INFO - Weather data extracted successfully for Pune.
+2026-09-03 14:47:16,346 - INFO - Extracting weather data for Hyderabad...
+2026-09-03 14:47:17,566 - INFO - Weather data extracted successfully for Hyderabad.
+2026-09-03 14:47:17,567 - INFO - Extracting weather data for Chennai...
+2026-09-03 14:47:18,945 - INFO - Weather data extracted successfully for Chennai.
+2026-09-03 14:47:18,946 - INFO - Extracting weather data for Kolkata...
+2026-09-03 14:47:20,252 - INFO - Weather data extracted successfully for Kolkata.
+2026-09-03 14:47:20,253 - INFO - Weather data extraction completed for all cities.
+2026-09-03 14:47:20,259 - INFO - Extract step completed successfully!
+2026-09-03 14:47:20,260 - INFO - STEP 2: TRANSFORM
+2026-09-03 14:47:20,260 - INFO - Starting transformation...
+2026-09-03 14:47:20,261 - INFO - Transforming data for Ahmedabad...
+2026-09-03 14:47:20,323 - INFO - Transforming data for Mumbai...
+2026-09-03 14:47:20,333 - INFO - Transforming data for Delhi...
+2026-09-03 14:47:20,343 - INFO - Transforming data for Bangalore...
+2026-09-03 14:47:20,359 - INFO - Transforming data for Pune...
+2026-09-03 14:47:20,370 - INFO - Transforming data for Hyderabad...
+2026-09-03 14:47:20,379 - INFO - Transforming data for Chennai...
+2026-09-03 14:47:20,390 - INFO - Transforming data for Kolkata...
+2026-09-03 14:47:20,408 - INFO - Transformation completed!
+2026-09-03 14:47:20,412 - INFO - Transformed 192 records from 8 cities.
+2026-09-03 14:47:20,414 - INFO - Transform step completed successfully!
+2026-09-03 14:47:20,414 - INFO - Transformed Data:
+2026-09-03 14:47:20,416 - INFO - 
+              timestamp  ...       city
+0   2026-09-03 00:00:00  ...  Ahmedabad
+1   2026-09-03 01:00:00  ...  Ahmedabad
+2   2026-09-03 02:00:00  ...  Ahmedabad
+3   2026-09-03 03:00:00  ...  Ahmedabad
+4   2026-09-03 04:00:00  ...  Ahmedabad
+..                  ...  ...        ...
+187 2026-09-03 19:00:00  ...    Kolkata
+188 2026-09-03 20:00:00  ...    Kolkata
+189 2026-09-03 21:00:00  ...    Kolkata
+190 2026-09-03 22:00:00  ...    Kolkata
+191 2026-09-03 23:00:00  ...    Kolkata
+
+[192 rows x 5 columns]
+2026-09-03 14:47:20,503 - INFO - Data Types:
+2026-09-03 14:47:20,504 - INFO - 
+timestamp         datetime64[us]
+temperature_c            float64
+humidity_pct               int64
+wind_speed_kmh           float64
+city                         str
+dtype: object
+2026-09-03 14:47:20,508 - INFO - STEP 3: DATA QUALITY VALIDATION
+2026-09-03 14:47:20,508 - INFO - Starting data quality validation...
+2026-09-03 14:47:20,509 - INFO - CHECK 1 PASSED: DataFrame is not empty.
+2026-09-03 14:47:20,510 - INFO - CHECK 2 PASSED: All required columns exist.
+2026-09-03 14:47:20,515 - INFO - CHECK 3 PASSED: No NULL values found.
+2026-09-03 14:47:20,523 - INFO - CHECK 4 PASSED: No duplicate records found.
+2026-09-03 14:47:20,527 - INFO - CHECK 5 PASSED: Humidity values are valid.
+2026-09-03 14:47:20,533 - INFO - CHECK 6 PASSED: Wind speed values are valid.
+2026-09-03 14:47:20,537 - INFO - CHECK 7 PASSED: Temperature values are valid.
+2026-09-03 14:47:20,538 - INFO - CHECK 8 PASSED: Timestamp values are valid.
+2026-09-03 14:47:20,540 - INFO - ========================================
+2026-09-03 14:47:20,540 - INFO - DATA QUALITY VALIDATION PASSED
+2026-09-03 14:47:20,541 - INFO - Validated 192 records successfully.
+2026-09-03 14:47:20,542 - INFO - ========================================
+2026-09-03 14:47:20,543 - INFO - Data quality validation completed successfully!
+2026-09-03 14:47:20,544 - INFO - STEP 4: LOAD
+2026-09-03 14:47:20,547 - INFO - Checking weather_data table...
+2026-09-03 14:47:20,548 - INFO - Connecting to PostgreSQL...
+2026-09-03 14:47:20,797 - INFO - PostgreSQL connection successful!
+2026-09-03 14:47:20,809 - INFO - Weather table created successfully!
+2026-09-03 14:47:20,810 - INFO - Loading data into PostgreSQL...
+2026-09-03 14:47:20,811 - INFO - Connecting to PostgreSQL...
+2026-09-03 14:47:21,101 - INFO - PostgreSQL connection successful!
+2026-09-03 14:47:21,457 - INFO - 168 new rows loaded successfully!
+2026-09-03 14:47:21,457 - INFO - 24 duplicate rows skipped!
+2026-09-03 14:47:21,458 - INFO - Load step completed successfully!
+2026-09-03 14:47:21,459 - INFO - ========================================
+2026-09-03 14:47:21,459 - INFO - PIPELINE COMPLETED SUCCESSFULLY
+2026-09-03 14:47:21,460 - INFO - ========================================
