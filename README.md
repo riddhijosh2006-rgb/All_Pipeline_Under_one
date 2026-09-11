@@ -2,7 +2,7 @@
 
 A practical **Data Engineering portfolio** containing end-to-end data pipelines built with Python, SQL, PostgreSQL, APIs, cloud technologies, data validation, logging, processing, and dashboards.
 
-This repository demonstrates how data moves through different stages of a modern data engineering lifecycle — from **data extraction and ingestion to transformation, validation, storage, analysis, and visualization**.
+This repository demonstrates different data engineering architectures — from traditional **ETL and ELT pipelines** to API-based pipelines, reverse pipelines, cloud workflows, and real-time data systems.
 
 ---
 
@@ -10,10 +10,12 @@ This repository demonstrates how data moves through different stages of a modern
 
 | Project | Pipeline | Main Technologies | Status |
 |---|---|---|---|
-| **Project 1 — ELT Pipeline** | CSV → PostgreSQL → SQL → Dashboard | Python, Pandas, PostgreSQL, SQL, Streamlit | ✅ Completed |
-| **Project 2 — API Data Pipeline** | API → Python → PostgreSQL → Dashboard | Python, REST API, PostgreSQL, Streamlit | 🚧 In Progress |
-| **Project 3 — AWS Data Pipeline** | Data → S3 → Processing → Warehouse → BI | AWS, S3, Python, SQL, Power BI | 🔜 Planned |
-| **Project 4 — Real-World Pipeline** | Application → API → S3 → Kafka → Processing → Database | AWS, Kafka, Python, PostgreSQL | 🔜 Planned |
+| **Project 1 — ELT Pipeline** | CSV → PostgreSQL → SQL Transform → Dashboard | Python, Pandas, PostgreSQL, SQL, Streamlit | ✅ Completed |
+| **Project 2 — API Data Pipeline** | API → Python → PostgreSQL → Dashboard | Python, REST API, PostgreSQL, Streamlit | ✅ Completed |
+| **Project 3 — ETL Pipeline** | Source → Extract → Transform → Load → Database | Python, Pandas, PostgreSQL, SQL | 🔜 Uploading |
+| **Project 4 — Reverse Data Pipeline** | Database → Transform → Export / API / Destination | Python, SQL, PostgreSQL | 🔜 Planned |
+| **Project 5 — AWS Data Pipeline** | Data → S3 → Processing → Warehouse → BI | AWS, S3, Python, SQL, Power BI | 🔜 Planned |
+| **Project 6 — Real-Time Data Pipeline** | Application → API → Kafka → Processing → Database → Dashboard | AWS, Kafka, Python, PostgreSQL | 🔜 Planned |
 
 ---
 
@@ -23,25 +25,15 @@ This repository demonstrates how data moves through different stages of a modern
 All_Pipeline_Under_one/
 │
 ├── 📁 data-engineering-project-ELT/
-│   ├── config/
-│   ├── data/
-│   ├── sql/
-│   ├── src/
-│   ├── dashboard.py
-│   ├── requirements.txt
-│   ├── readme.md
-│   └── .env.example
-│
 ├── 📁 api_data_pipeline/
-│   ├── config/
-│   ├── dashboard/
-│   ├── sql/
-│   ├── src/
-│   ├── requirements.txt
-│   └── ...
-│
+├── 📁 data-engineering-project-ETL/
+├── 📁 reverse-data-pipeline/
+├── 📁 aws-data-pipeline/
+├── 📁 real-time-data-pipeline/
 └── README.md
 ```
+
+> Projects marked as planned will be added as development progresses.
 
 ---
 
@@ -91,15 +83,13 @@ Streamlit Dashboard
 - Interactive dashboard
 - Environment-variable-based database configuration
 
-### 🔄 Why ELT?
-
-This project follows **ELT (Extract, Load, Transform)** instead of traditional ETL.
+### 🔄 ELT Approach
 
 ```text
 Extract → Load → Transform → Validate → Analyze
 ```
 
-Raw data is first loaded into PostgreSQL, and transformation is then performed inside PostgreSQL using SQL.
+Raw data is first loaded into PostgreSQL, and transformation is performed inside PostgreSQL using SQL.
 
 👉 **Project:** `data-engineering-project-ELT`
 
@@ -151,11 +141,101 @@ Streamlit Dashboard
 - Interactive dashboard
 - Environment-based configuration
 
+### 📊 Status
+
+The API pipeline is **completed** and demonstrates an end-to-end API-to-database data engineering workflow with an interactive dashboard.
+
 👉 **Project:** `api_data_pipeline`
 
 ---
 
-# ☁️ Project 3 — AWS Data Pipeline
+# 🔄 Project 3 — ETL Data Pipeline
+
+This project demonstrates the traditional **ETL (Extract, Transform, Load)** architecture.
+
+## Architecture
+
+```text
+Source Dataset
+      ↓
+Extract
+      ↓
+Python / Pandas Transformation
+      ↓
+Data Validation
+      ↓
+PostgreSQL
+      ↓
+Analytics / Dashboard
+```
+
+### 🔧 Technologies
+
+- Python
+- Pandas
+- PostgreSQL
+- SQL
+- Data Validation
+- Logging
+- Dashboard / Visualization
+
+### 🎯 Purpose
+
+The ETL project is included to compare traditional ETL with the ELT architecture used in Project 1.
+
+### ETL
+
+```text
+Extract → Transform → Load
+```
+
+### ELT
+
+```text
+Extract → Load → Transform
+```
+
+The project will demonstrate where transformation takes place and how ETL and ELT differ in an end-to-end data workflow.
+
+👉 **Project:** `data-engineering-project-ETL`
+
+---
+
+# 🔁 Project 4 — Reverse Data Pipeline
+
+A reverse data pipeline moves processed or stored data **from a database or analytical system toward a downstream destination**.
+
+## Planned Architecture
+
+```text
+PostgreSQL / Data Warehouse
+          ↓
+        Extract
+          ↓
+       Transform
+          ↓
+   Export / API / Connector
+          ↓
+   External Destination
+```
+
+Possible destinations include:
+
+- CSV / files
+- REST API
+- External application
+- Another database
+- Cloud storage
+
+### 🎯 Purpose
+
+This project will demonstrate the reverse direction of conventional data ingestion and show how processed data can be prepared and delivered to downstream systems.
+
+👉 **Project:** `reverse-data-pipeline`
+
+---
+
+# ☁️ Project 5 — AWS Data Pipeline
 
 ## Planned Architecture
 
@@ -182,22 +262,20 @@ Power BI
 - SQL
 - Power BI
 
-The objective is to demonstrate a cloud-based data pipeline and understand how data engineering workflows are implemented using AWS services.
+The objective is to demonstrate a cloud-based data pipeline using AWS services.
 
 ---
 
-# ⚡ Project 4 — Real-World Data Engineering Pipeline
+# ⚡ Project 6 — Real-Time Data Engineering Pipeline
 
-This project will simulate a pipeline for data generated by a real application.
+This project will simulate a pipeline for data generated continuously by a real application.
 
 ## Planned Architecture
 
 ```text
 Real Application
       ↓
-API
-      ↓
-Amazon S3
+API / Event Producer
       ↓
 Apache Kafka
       ↓
@@ -222,7 +300,7 @@ Dashboard
 - SQL
 - Streamlit / Power BI
 
-The goal is to demonstrate how application-generated data can be collected, transported, processed, stored, and visualized using a scalable data engineering architecture.
+The goal is to demonstrate how application-generated data can be collected, transported, processed, stored, and visualized in a scalable real-time architecture.
 
 ---
 
@@ -241,7 +319,9 @@ The goal is to demonstrate how application-generated data can be collected, tran
 - SQL
 
 ### Data Engineering
-- ETL / ELT
+- ETL
+- ELT
+- Reverse Pipelines
 - Data Validation
 - Data Quality
 - Logging
@@ -279,15 +359,19 @@ SQL
    ↓
 PostgreSQL
    ↓
-ETL / ELT
+ETL
    ↓
-APIs
+ELT
+   ↓
+API Pipelines
    ↓
 Data Validation
    ↓
 Logging
    ↓
 Dashboards
+   ↓
+Reverse Pipelines
    ↓
 AWS
    ↓
@@ -300,18 +384,20 @@ Real-Time Data Engineering
 
 # 🎯 Portfolio Goals
 
-This repository focuses on **learning by building real projects** rather than only studying theory.
+This repository focuses on **learning by building practical projects** rather than only studying theory.
 
 The main goals are to demonstrate practical understanding of:
 
 - Data ingestion
-- Batch pipelines
+- ETL architecture
 - ELT architecture
+- Reverse data movement
 - API integration
 - SQL transformations
 - Relational databases
 - Data quality and validation
 - Logging and error handling
+- Batch pipelines
 - Cloud data pipelines
 - Streaming data
 - Data visualization
@@ -323,7 +409,7 @@ The main goals are to demonstrate practical understanding of:
 
 Sensitive credentials are **not committed** to this repository.
 
-Database credentials are stored using environment variables.
+Database credentials and API keys are stored using environment variables.
 
 Example:
 
@@ -337,7 +423,7 @@ DB_PASSWORD=
 
 The actual `.env` file is excluded using `.gitignore`.
 
-Only `.env.example` is included so developers can understand the required configuration.
+Only `.env.example` files are included so developers can understand the required configuration.
 
 ---
 
@@ -350,16 +436,16 @@ git clone https://github.com/riddhijosh2006-rgb/All_Pipeline_Under_one.git
 cd All_Pipeline_Under_one
 ```
 
-Open an individual project directory and follow its README.
+Open an individual project directory and follow its project-specific README.
 
-For example:
+Example:
 
 ```bash
 cd data-engineering-project-ELT
 python -m pip install -r requirements.txt
 ```
 
-Create your local `.env` file from `.env.example`, configure PostgreSQL, and follow the project-specific instructions.
+Create your local `.env` file from `.env.example`, configure the required database/API settings, and follow the project's instructions.
 
 ---
 
@@ -370,13 +456,19 @@ Project 1 — ELT Pipeline
 ████████████████████ 100% ✅
 
 Project 2 — API Data Pipeline
-██████████████░░░░░░  70% 🚧
+████████████████████ 100% ✅
 
-Project 3 — AWS Pipeline
-████░░░░░░░░░░░░░░░░  20% 🔜
+Project 3 — ETL Pipeline
+██████████████░░░░░░  70% 🔜 Uploading
 
-Project 4 — Real-World Pipeline
-██░░░░░░░░░░░░░░░░░░  10% 🔜
+Project 4 — Reverse Data Pipeline
+████░░░░░░░░░░░░░░░░  20% 🔜 Planned
+
+Project 5 — AWS Pipeline
+██░░░░░░░░░░░░░░░░░░  10% 🔜 Planned
+
+Project 6 — Real-Time Pipeline
+██░░░░░░░░░░░░░░░░░░  10% 🔜 Planned
 ```
 
 ---
@@ -398,21 +490,26 @@ Final-year Computer Science student building practical projects in:
 
 ## ⭐ Repository Vision
 
-The long-term goal is to build a complete collection of **end-to-end data engineering projects**, starting with simple batch pipelines and progressing toward cloud-based and real-time systems.
+The long-term goal is to build a complete collection of **end-to-end data engineering projects**, covering multiple directions of data movement.
 
 ```text
-                    ALL PIPELINES
-                         │
-        ┌────────────────┼────────────────┐
-        ↓                ↓                ↓
-      Batch             Cloud          Streaming
-        │                │                │
-      ELT/API           AWS             Kafka
-        │                │                │
-        └────────────────┼────────────────┘
-                         ↓
-                 Data Engineering
-                    Portfolio
+                         DATA ENGINEERING
+                                │
+              ┌─────────────────┼─────────────────┐
+              ↓                 ↓                 ↓
+             ETL               ELT            Reverse
+              │                 │              Pipeline
+              └─────────────────┼─────────────────┘
+                                ↓
+                              APIs
+                                ↓
+                               AWS
+                                ↓
+                              Kafka
+                                ↓
+                         Real-Time Systems
 ```
+
+The repository will continue to grow from basic batch processing toward cloud-based, reverse, and real-time data engineering systems.
 
 ⭐ Explore the individual projects to see the complete implementation of each pipeline.
