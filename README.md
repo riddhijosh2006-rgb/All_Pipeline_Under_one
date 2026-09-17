@@ -14,7 +14,7 @@ This repository demonstrates different data engineering architectures — from t
 | **Project 2 — API Data Pipeline** | API → Python → PostgreSQL → Dashboard | Python, REST API, PostgreSQL, Streamlit | ✅ Completed |
 | **Project 3 — ETL Pipeline** | Source → Extract → Transform → Load → Database | Python, Pandas, PostgreSQL, SQL | ✅ Completed  |
 | **Project 4 — Reverse Data Pipeline** | Database → Transform → Export / API / Destination | Python, SQL, PostgreSQL | ✅ Completed  |
-| **Project 5 — Real-Time Data Pipeline** | Application → API → Kafka → Processing → Database → Dashboard | AWS, Kafka, Python, PostgreSQL | 🔜 Planned |
+| **Project 5 — Real-Time Data Pipeline** | Application → API → Kafka → Processing → Database → Dashboard | Local , Kafka, Python, PostgreSQL | ✅ Completed |
 
 ---
 
@@ -260,8 +260,7 @@ Dashboard
 
 - Python
 - REST APIs
-- AWS
-- Amazon S3
+- Local Data
 - Apache Kafka
 - Stream Processing
 - PostgreSQL
