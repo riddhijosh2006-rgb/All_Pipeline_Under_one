@@ -12,10 +12,9 @@ This repository demonstrates different data engineering architectures — from t
 |---|---|---|---|
 | **Project 1 — ELT Pipeline** | CSV → PostgreSQL → SQL Transform → Dashboard | Python, Pandas, PostgreSQL, SQL, Streamlit | ✅ Completed |
 | **Project 2 — API Data Pipeline** | API → Python → PostgreSQL → Dashboard | Python, REST API, PostgreSQL, Streamlit | ✅ Completed |
-| **Project 3 — ETL Pipeline** | Source → Extract → Transform → Load → Database | Python, Pandas, PostgreSQL, SQL | 🔜 Uploading |
-| **Project 4 — Reverse Data Pipeline** | Database → Transform → Export / API / Destination | Python, SQL, PostgreSQL | 🔜 Planned |
-| **Project 5 — AWS Data Pipeline** | Data → S3 → Processing → Warehouse → BI | AWS, S3, Python, SQL, Power BI | 🔜 Planned |
-| **Project 6 — Real-Time Data Pipeline** | Application → API → Kafka → Processing → Database → Dashboard | AWS, Kafka, Python, PostgreSQL | 🔜 Planned |
+| **Project 3 — ETL Pipeline** | Source → Extract → Transform → Load → Database | Python, Pandas, PostgreSQL, SQL | ✅ Completed  |
+| **Project 4 — Reverse Data Pipeline** | Database → Transform → Export / API / Destination | Python, SQL, PostgreSQL | ✅ Completed  |
+| **Project 5 — Real-Time Data Pipeline** | Application → API → Kafka → Processing → Database → Dashboard | AWS, Kafka, Python, PostgreSQL | 🔜 Planned |
 
 ---
 
@@ -28,7 +27,6 @@ All_Pipeline_Under_one/
 ├── 📁 api_data_pipeline/
 ├── 📁 data-engineering-project-ETL/
 ├── 📁 reverse-data-pipeline/
-├── 📁 aws-data-pipeline/
 ├── 📁 real-time-data-pipeline/
 └── README.md
 ```
@@ -235,38 +233,8 @@ This project will demonstrate the reverse direction of conventional data ingesti
 
 ---
 
-# ☁️ Project 5 — AWS Data Pipeline
 
-## Planned Architecture
-
-```text
-Data Source
-     ↓
-Amazon S3
-     ↓
-Python / AWS Processing
-     ↓
-Database / Data Warehouse
-     ↓
-SQL Analytics
-     ↓
-Power BI
-```
-
-### Planned Technologies
-
-- AWS S3
-- AWS Glue
-- Python
-- PostgreSQL / Amazon Redshift
-- SQL
-- Power BI
-
-The objective is to demonstrate a cloud-based data pipeline using AWS services.
-
----
-
-# ⚡ Project 6 — Real-Time Data Engineering Pipeline
+# ⚡ Project 5 — Real-Time Data Engineering Pipeline
 
 This project will simulate a pipeline for data generated continuously by a real application.
 
@@ -459,15 +427,12 @@ Project 2 — API Data Pipeline
 ████████████████████ 100% ✅
 
 Project 3 — ETL Pipeline
-██████████████░░░░░░  70% 🔜 Uploading
+████████████████████ 100% ✅
 
 Project 4 — Reverse Data Pipeline
-████░░░░░░░░░░░░░░░░  20% 🔜 Planned
+████████████████████ 100% ✅
 
-Project 5 — AWS Pipeline
-██░░░░░░░░░░░░░░░░░░  10% 🔜 Planned
-
-Project 6 — Real-Time Pipeline
+Project 5 — Real-Time Pipeline
 ██░░░░░░░░░░░░░░░░░░  10% 🔜 Planned
 ```
 
