@@ -1,65 +1,121 @@
-# ⚡ HelloQ Real-Time Data Engineering Pipeline
+HelloQ Real-Time Data Pipeline ⚡
 
-A local **real-time event-driven data pipeline** that simulates a HelloQ-style matrimony application and processes user activity through **Apache Kafka, Python, PostgreSQL, and Streamlit**.
+A real-time data engineering project that simulates a HelloQ-style application and processes user activity events using Python, Apache Kafka, PostgreSQL, and Streamlit.
 
-The project demonstrates how application events can be generated continuously, streamed through Kafka, consumed and validated by Python, stored in PostgreSQL, transformed into real-time user metrics, and visualized through a live analytics dashboard.
+Architecture
 
----
+HelloQ App Simulator
+        ↓
+Python Event Generator
+        ↓
+Apache Kafka
+        ↓
+Kafka Consumer
+        ↓
+Validation & Processing
+        ↓
+PostgreSQL
+        ↓
+Streamlit Dashboard
 
-## 🚀 Project Overview
+Tech Stack
 
-This project simulates application activity such as:
+Python
 
-- User login
-- Profile views
-- Interest sent
-- Interest accepted
-- Match creation
-- Chat started
-- Messages sent
-- Logout
-- Registration activity
+Apache Kafka
 
-The system contains approximately **300 users** and an initial dataset of around **2,000 historical events**.
+PostgreSQL
 
-After the historical data is established, the project generates new events continuously to simulate live application activity.
+Streamlit
 
----
+Plotly
 
-## 🏗️ Architecture
+psycopg2
 
-```text
-                   HELLOQ-LIKE APPLICATION
-                            │
-                            ▼
-                  Python Event Generator
-                            │
-                            ▼
-                         Apache Kafka
-                            │
-                 ┌──────────┴──────────┐
-                 │                     │
-                 ▼                     ▼
-          helloq-events       helloq-live-events
-                 │                     │
-                 └──────────┬──────────┘
-                            │
-                            ▼
-                    Python Kafka Consumer
-                            │
-                Validation + Idempotency
-                            │
-                            ▼
-                     PostgreSQL
-                ┌───────────┴───────────┐
-                │                       │
-                ▼                       ▼
-        processed_events       user_realtime_status
-                │                       │
-                └───────────┬───────────┘
-                            │
-                            ▼
-                    Streamlit Dashboard
-                            │
-                            ▼
-                  Real-Time Analytics
+kafka-python
+
+Features
+
+Real-time user activity events
+
+Kafka producer and consumer
+
+Live event generation
+
+PostgreSQL event storage
+
+Duplicate event prevention
+
+Real-time user metrics
+
+Live analytics dashboard
+
+Synthetic dataset of ~300 users and ~2,000 historical events
+
+Event Types
+
+registration_started
+registration_completed
+login
+profile_view
+interest_sent
+interest_accepted
+match_created
+chat_started
+message_sent
+logout
+
+Project Structure
+
+realtime-helloq-pipeline/
+│
+├── src/
+│   ├── producer.py
+│   ├── consumer.py
+│   ├── live_generator.py
+│   └── live_consumer.py
+│
+├── dashboard.py
+├── .env.example
+├── .gitignore
+├── requirements.txt
+└── README.md
+
+Run
+
+Start Kafka first, then run:
+
+python -m src.producer
+
+python -m src.consumer
+
+For live events:
+
+python -m src.live_consumer
+
+python -m src.live_generator
+
+Start the dashboard:
+
+python -m streamlit run dashboard.py
+
+Database
+
+PostgreSQL database:
+
+helloq_realtime
+
+Main tables:
+
+users
+user_events
+matches
+chats
+processed_events
+user_realtime_status
+
+Version
+
+Version 1 – Real-Time Kafka Pipeline ✅
+
+Future Version 2 will explore Spark Structured Streaming and advanced real-time processing.
